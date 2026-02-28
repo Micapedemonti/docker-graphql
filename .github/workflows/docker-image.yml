@@ -20,10 +20,10 @@ jobs:
     - name: Docker login
       env: 
         DOCKER-USER: ${{ secrets.DOCKER_USER }}
-        DOCKER-PASSWORD: ${{ secrets.TOKEN_PASSWORD }}
+        DOCKER-PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
         echo "Iniciando login"
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        docker login -u $DOCKER-USER -p $DOCKER-PASSWORD
         echo "Finalizando login"
 
  #   - name: Build the Docker image
